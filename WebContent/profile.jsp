@@ -45,7 +45,7 @@
 
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+                <a class="nav-link" href="home.jsp"><i class="fa fa-fw fa-home"></i> Home</a>
               </li>
             </ul>
           </div>
