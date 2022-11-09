@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="title">
+        <h1 class="text">BalVikasGuru</h1>
+        <a class="sign-up del-btn" href="/delete/<%= entry._id %>">Delete</a>
+        <a class="sign-up" href="/home">Home</a>
+    </div>
+    <div class="content">
+        <div class="entries-container">
+            <div class="entry-disp">
+                <h3><%= entry.title %></h3>
+                <p><%= entry.content %></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
