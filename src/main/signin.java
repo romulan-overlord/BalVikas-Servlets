@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class learnerservlet
@@ -27,18 +28,24 @@ public class signin extends HttpServlet {
 
 		try {
 			PrintWriter out=response.getWriter();
+			HttpSession session = request.getSession(); 
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
+//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
 			String n=request.getParameter("userID");
 			String p=request.getParameter("password");
-			PreparedStatement ps=con.prepareStatement("select username from login where username=? and password=?");
+			PreparedStatement ps=con.prepareStatement("select * from login where username=? and password=?");
 			ps.setString(1, n);
 			ps.setString(2, p);
 			ResultSet rs=ps.executeQuery();
 			if (rs.next())
 			{
-				request.setAttribute("uID", n);
-				request.setAttribute("pwd", p);
+//				request.setAttribute("uID", n);
+//				request.setAttribute("pwd", p);
+				session.setAttribute("uID", rs.getString("username"));
+				session.setAttribute("name", rs.getString("name"));
+				session.setAttribute("email", rs.getString("emailID"));
+				
 				RequestDispatcher rd= request.getRequestDispatcher("home.jsp");
 				rd.forward(request, response);
 			}

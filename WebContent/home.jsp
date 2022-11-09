@@ -58,7 +58,7 @@
                   <ul class="navbar-nav">
                       <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <%= request.getAttribute("uID") %>
+                        <%= session.getAttribute("uID") %>
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 

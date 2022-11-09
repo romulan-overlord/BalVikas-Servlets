@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class learnerservlet
@@ -27,16 +28,18 @@ public class delete extends HttpServlet {
 
 		try {
 			PrintWriter out=response.getWriter();
+			HttpSession session = request.getSession(); 
 			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
-			String n=request.getParameter("userID");
-//			PreparedStatement ps=con.prepareStatement("select username from login where username=? and password=?");
+			String n=(String)session.getAttribute("uID");
 			PreparedStatement ps=con.prepareStatement("DELETE FROM login WHERE (username = ?)");
 			ps.setString(1, n);
 			int rs=ps.executeUpdate();
 			if (rs > 0)
 			{
-				System.out.println("Deleted Successfully");
+				RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
+				rd.forward(request, response);
 			}
 			else
 			{

@@ -70,20 +70,21 @@
             <tbody>
                 <tr>
                     <td>Name - </td>
-                    <td>xxx</td>
+                    <td><%= session.getAttribute("name") %></td>
                 </tr>
                 <tr>
                     <td>Username - </td>
-                    <td>zzz</td>
+                    <td><%= session.getAttribute("uID") %></td>
                 </tr>
                 <tr>
                     <td>Email Id - </td>
-                    <td>yyy</td>
+                    <td><%= session.getAttribute("email") %></td>
                 </tr>
             </tbody>
         </table>
-
-        <button type="submit" class="btn btn-danger rounded w-md mt-3">Delete Account</button>
+		<form action="delete" method="post">
+        	<button type="submit" class="btn btn-danger rounded w-md mt-3">Delete Account</button>
+        </form>
 
     </div>
 </section>
