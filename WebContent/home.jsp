@@ -61,8 +61,10 @@
                         <%= request.getAttribute("uID") %>
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
                         <a class="dropdown-item" href="profile.jsp">Profile</a>
                         <a class="dropdown-item" href="/edit-pwd">Edit Password</a>
+
                         <a class="dropdown-item" href="index.jsp">Log Out</a>
                       </div>
                     </li>   
@@ -125,12 +127,12 @@
       <h1 class="section-heading">About Sri Sathya Sai Balvikas</h1>
       <p class="section-para">The Sri Sathya Sai Bal Vikas Program has been founded by Bhagawan Sri Sathya Sai Baba
         to enable a world-wide renewal of individual commitment to an active moral life.
-        Bhagawan Baba says: <b>“You must study to become steady. See to it that the Divine Love in
+        Bhagawan Baba says: <b>You must study to become steady. See to it that the Divine Love in
         your heart is steady.<br> The goal of education should not be to just acquire theoretical
         knowledge but to practically apply it in your life. Birds and animals lead life without
-        ‘studying’, but your education must result in you developing a strong and good character.”</b><br> 
+        studying, but your education must result in you developing a strong and good character.</b><br> 
         Sri Sathya Sai Bal Vikas has thus been initiated and founded by Sri Sathya Sai
-        Baba, based on the Divine Dictum <br>  <em>“The End of Education is character.”</em><br><br>
+        Baba, based on the Divine Dictum <br>  <em>The End of Education is character.</em><br><br>
         <div class="overview">
           <h1 class="section-heading">An Overview of Sri Sathya Sai Balvikas Programme</h1>
           <img class="curriculum-img" src="images/An Overview of Sri Sathya Sai Balvikas Programme.png" alt="An Overview">
