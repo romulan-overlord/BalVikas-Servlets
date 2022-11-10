@@ -45,16 +45,15 @@
 
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="home.jsp"><i class="fa fa-fw fa-home"></i> Home</a>
+                <a class="nav-link" href="/index.html"><i class="fa fa-fw fa-home"></i> Home</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      
-      <!-- profile -->
-      
-      <section id="profile">
+    
+
+    <section id="editpass">
         <div class="container-prof">
             <div class="profile-img">
                 <img src="images/profile.png" alt="this image contains user-image">
@@ -62,34 +61,42 @@
     
             <div class="content">
                 <h3 class="name">
-                    <%= session.getAttribute("name") %>
+                    Thilak
                 </h3>
                 <p class="username">
-                    <%= session.getAttribute("uID") %>
+                    sai
                 </p>
-                <p class="email">
-                    <%= session.getAttribute("email") %>
-                </p>
-                <div class="delete-acc">
-                    <form action="delete" method="post">
-        				<button type="submit" class="btn btn-danger rounded w-md mt-3">Delete Account</button>
-        			</form>
+                <div class="change-pass">
+
                 </div>
+                <form class="form" role="form" autocomplete="off">
+                    <div class="form-group">
+                        <label for="inputPasswordOld">Current Password</label>
+                        <input type="password" class="form-control" id="inputPasswordOld" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPasswordNew">New Password</label>
+                        <input type="password" class="form-control" id="inputPasswordNew" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPasswordNewVerify">Verify</label>
+                        <input type="password" class="form-control" id="inputPasswordNewVerify" required="">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-lg">Save</button>
+                    </div>
+                </form>
             </div>
         </div>
         
-   	</section>
-    
+    </section>  
 
 
     </div>
 
   </section>
 
-
-<!-- profile -->
-
-
+  
 
   <!-- Footer -->
   <!-- Contact Section -->

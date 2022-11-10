@@ -30,8 +30,8 @@ public class delete extends HttpServlet {
 			PrintWriter out=response.getWriter();
 			HttpSession session = request.getSession(); 
 			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
+	//		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
 			String n=(String)session.getAttribute("uID");
 			PreparedStatement ps=con.prepareStatement("DELETE FROM login WHERE (username = ?)");
 			ps.setString(1, n);
