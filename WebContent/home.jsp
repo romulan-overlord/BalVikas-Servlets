@@ -61,7 +61,7 @@
                         <%= request.getAttribute("uID") %>
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/myProfile">Profile</a>
+                        <a class="dropdown-item" href="profile.jsp">Profile</a>
                         <a class="dropdown-item" href="/edit-pwd">Edit Password</a>
                         <a class="dropdown-item" href="index.jsp">Log Out</a>
                       </div>
