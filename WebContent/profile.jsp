@@ -33,7 +33,7 @@
 
       <!-- Nav Bar -->
       
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="padding-bottom: 3%;">
         <div class="container">
           <a class="navbar-brand" href="">sssbalvikasdb</a>
 
@@ -62,31 +62,31 @@
 <!-- profile -->
 
 <section id="profile">
-    <img  class="profile-image" src="images/profile.png" alt="user" width="100px" height="100px">
-    <h1 class="big-heading">Profile</h1>
+    <div class="container-prof">
+        <div class="profile-img">
+            <img src="images/profile.png" alt="this image contains user-image">
+        </div>
 
-    <div class="profile-cls">
-        <table>
-            <tbody>
-                <tr>
-                    <td>Name - </td>
-                    <td><%= session.getAttribute("name") %></td>
-                </tr>
-                <tr>
-                    <td>Username - </td>
-                    <td><%= session.getAttribute("uID") %></td>
-                </tr>
-                <tr>
-                    <td>Email Id - </td>
-                    <td><%= session.getAttribute("email") %></td>
-                </tr>
-            </tbody>
-        </table>
-		<form action="delete" method="post">
-        	<button type="submit" class="btn btn-danger rounded w-md mt-3">Delete Account</button>
-        </form>
+        <div class="content">
+            <h3 class="name">
+                <%= session.getAttribute("name") %>
+            </h3>
+            <p class="username">
+                <%= session.getAttribute("uID") %>
+            </p>
+            <p class="email">
+                <%= session.getAttribute("email") %>
+            </p>
+        </div>
 
+        <div class="delete-acc">
+        	<form action="delete" method="post">
+        		<button type="submit" class="btn btn-danger rounded w-md mt-3">Delete Account</button>
+        	</form>
+        </div>
+        
     </div>
+    
 </section>
 
 
