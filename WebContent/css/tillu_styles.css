@@ -250,3 +250,28 @@ p {
 
 
 
+/* edit pass word */
+
+
+.container-editpwd{
+  width: 40em;
+  height: 35em;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  border-radius: 1em;  
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1em;
+  margin: auto;
+}
+
+.content-pwd{
+  color: #565656;
+  padding: 10% 0 5%;
+  background-color: #fff;
+}
+
+.form-inline{
+  padding-left: 18%;
+  text-align: right;
+}

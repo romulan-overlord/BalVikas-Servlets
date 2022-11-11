@@ -45,7 +45,7 @@
 
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+                <a class="nav-link" href="home.jsp"><i class="fa fa-fw fa-home"></i> Home</a>
               </li>
             </ul>
           </div>
@@ -53,40 +53,45 @@
       </nav>
     
 
-    <section id="editpass">
-        <div class="container-prof">
+      <section id="profile">
+        <div class="container-editpwd">
             <div class="profile-img">
                 <img src="images/profile.png" alt="this image contains user-image">
             </div>
     
-            <div class="content">
+            <div class="content-pwd">
                 <h3 class="name">
                     Thilak
                 </h3>
                 <p class="username">
                     sai
                 </p>
-                <div class="change-pass">
-
-                </div>
-                <form class="form" role="form" autocomplete="off">
-                    <div class="form-group">
-                        <label for="inputPasswordOld">Current Password</label>
-                        <input type="password" class="form-control" id="inputPasswordOld" required="">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPasswordNew">New Password</label>
-                        <input type="password" class="form-control" id="inputPasswordNew" required="">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPasswordNewVerify">Verify</label>
-                        <input type="password" class="form-control" id="inputPasswordNewVerify" required="">
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-success btn-lg">Save</button>
-                    </div>
-                </form>
+                <form class="form-inline">
+                <table class="table-pwd">
+                  <tbody>
+                      <tr>
+                        <div class="form-group">
+                          <td><label class="text">Password</label></td>
+                          <td><input type="password" class="form-control mx-sm-3"></td>
+                        </div>
+                      </tr>
+                      <tr>
+                        <div class="form-group">
+                          <td><label class="text">New Password</label></td>
+                          <td><input type="password" class="form-control mx-sm-3"></td>
+                        </div>
+                    </tr>
+                    <tr>
+                      <div class="form-group">
+                        <td><label class="text">Verify</label></td>
+                        <td><input type="password" class="form-control mx-sm-3"></td>
+                      </div>
+                  </tr>
+                  </tbody>
+              </table>
             </div>
+            <button type="submit" class="btn btn-outline-success rounded w-md mt-3">Save</button>
+
         </div>
         
     </section>  
