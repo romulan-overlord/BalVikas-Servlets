@@ -29,8 +29,8 @@ public class editPwd extends HttpServlet {
 			PrintWriter out=response.getWriter();
 			HttpSession session = request.getSession(); 
 			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
+//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
 			String crrPwd=request.getParameter("crrPwd");
 			String newPwd=request.getParameter("newPwd");
 			String confPwd=request.getParameter("confPwd");
@@ -44,7 +44,7 @@ public class editPwd extends HttpServlet {
 					PreparedStatement ps=con.prepareStatement("UPDATE login SET password = '" + newPwd + "' WHERE (username = '" + uID + "')");
 					int check = ps.executeUpdate();
 					if(check > 0) {
-						RequestDispatcher rd= request.getRequestDispatcher("profile.jsp");
+						RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
 						rd.forward(request, response);
 					}
 				}else {

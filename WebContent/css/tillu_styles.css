@@ -271,7 +271,7 @@ p {
   background-color: #fff;
 }
 
-.form-inline{
-  padding-left: 18%;
-  text-align: right;
+.form-group{
+  padding: 0 30%;
+  text-align: left;
 }

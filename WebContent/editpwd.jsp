@@ -70,22 +70,20 @@
                 <div class="change-pass">
 
                 </div>
-                <form class="form" action="editPwd" method="post" role="form" autocomplete="off">
+                    <form action="editPwd" method="post">
                     <div class="form-group">
-                        <label for="inputPasswordOld">Current Password</label>
-                        <input type="password" class="form-control" id="inputPasswordOld" name="crrPwd">
+                      <label>Old Password</label>
+                      <input type="password" name="crrPwd" class="form-control" placeholder=" Enter Password">
                     </div>
                     <div class="form-group">
-                        <label for="inputPasswordNew">New Password</label>
-                        <input type="password" class="form-control" id="inputPasswordNew" name = "newPwd">
+                      <label>New Password</label>
+                      <input type="password" class="form-control" name="newPwd" placeholder=" Enter Password">
                     </div>
                     <div class="form-group">
-                        <label for="inputPasswordNewVerify">Confirm Password</label>
-                        <input type="password" class="form-control" id="inputPasswordNewVerify" name = confPwd>
+                      <label>Verify</label>
+                      <input type="password" class="form-control" name="confPwd" placeholder=" Enter Password">
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-success btn-lg">Save</button>
-                    </div>
+                  <button type="submit" class="btn btn-outline-success">Submit</button>
                 </form>
             </div>
             <button type="submit" class="btn btn-outline-success rounded w-md mt-3">Save</button>

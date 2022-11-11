@@ -30,8 +30,8 @@ public class signin extends HttpServlet {
 			PrintWriter out=response.getWriter();
 			HttpSession session = request.getSession(); 
 			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
+//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
 			String n=request.getParameter("userID");
 			String p=request.getParameter("password");
 			PreparedStatement ps=con.prepareStatement("select * from login where username=? and password=?");
