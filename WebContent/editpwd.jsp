@@ -61,26 +61,26 @@
     
             <div class="content">
                 <h3 class="name">
-                    Thilak
+                    <%= session.getAttribute("name") %>
                 </h3>
                 <p class="username">
-                    sai
+                    <%= session.getAttribute("uID") %>
                 </p>
                 <div class="change-pass">
 
                 </div>
-                <form class="form" role="form" autocomplete="off">
+                <form class="form" action="editPwd" method="post" role="form" autocomplete="off">
                     <div class="form-group">
                         <label for="inputPasswordOld">Current Password</label>
-                        <input type="password" class="form-control" id="inputPasswordOld" required="">
+                        <input type="password" class="form-control" id="inputPasswordOld" name="crrPwd">
                     </div>
                     <div class="form-group">
                         <label for="inputPasswordNew">New Password</label>
-                        <input type="password" class="form-control" id="inputPasswordNew" required="">
+                        <input type="password" class="form-control" id="inputPasswordNew" name = "newPwd">
                     </div>
                     <div class="form-group">
-                        <label for="inputPasswordNewVerify">Verify</label>
-                        <input type="password" class="form-control" id="inputPasswordNewVerify" required="">
+                        <label for="inputPasswordNewVerify">Confirm Password</label>
+                        <input type="password" class="form-control" id="inputPasswordNewVerify" name = confPwd>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-success btn-lg">Save</button>

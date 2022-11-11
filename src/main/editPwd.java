@@ -19,41 +19,41 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class learnerservlet
  */
-@WebServlet("/signin")
-public class signin extends HttpServlet {
+@WebServlet("/editPwd")
+public class editPwd extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
   	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
 		try {
 			PrintWriter out=response.getWriter();
 			HttpSession session = request.getSession(); 
 			Class.forName("com.mysql.cj.jdbc.Driver");
 //			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
-			String n=request.getParameter("userID");
-			String p=request.getParameter("password");
-			PreparedStatement ps=con.prepareStatement("select * from login where username=? and password=?");
-			ps.setString(1, n);
-			ps.setString(2, p);
-			ResultSet rs=ps.executeQuery();
-			if (rs.next())
-			{
-//				request.setAttribute("uID", n);
-//				request.setAttribute("pwd", p);
-				session.setAttribute("uID", rs.getString("username"));
-				session.setAttribute("name", rs.getString("name"));
-				session.setAttribute("email", rs.getString("emailID"));
-				
-				RequestDispatcher rd= request.getRequestDispatcher("home.jsp");
-				rd.forward(request, response);
+			String crrPwd=request.getParameter("crrPwd");
+			String newPwd=request.getParameter("newPwd");
+			String confPwd=request.getParameter("confPwd");
+			String uID=(String)session.getAttribute("uID");
+			System.out.println(uID);
+			PreparedStatement nps = con.prepareStatement("select password from login where username = '" + uID + "'" );
+			ResultSet rs = nps.executeQuery();
+			if(rs.next()) {
+				System.out.println(rs.getString("password"));
+				if(crrPwd.equals(rs.getString("password"))) {
+					PreparedStatement ps=con.prepareStatement("UPDATE login SET password = '" + newPwd + "' WHERE (username = '" + uID + "')");
+					int check = ps.executeUpdate();
+					if(check > 0) {
+						RequestDispatcher rd= request.getRequestDispatcher("profile.jsp");
+						rd.forward(request, response);
+					}
+				}else {
+					System.out.println("Fatal Error");
+					RequestDispatcher rd= request.getRequestDispatcher("editpwd.jsp");
+					rd.forward(request, response);
+				}
 			}
-			else
-			{
-				RequestDispatcher rd= request.getRequestDispatcher("signin.jsp");
-				rd.forward(request, response);
-			}
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
