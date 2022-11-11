@@ -27,8 +27,8 @@ public class signup extends HttpServlet {
 		try {
 			PrintWriter out=response.getWriter();
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
-//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
+//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","sairam123!");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/balvikas","root","rockfall911");
 			String uid=request.getParameter("userID");
 			String pwd=request.getParameter("password");
 			String name=request.getParameter("name");

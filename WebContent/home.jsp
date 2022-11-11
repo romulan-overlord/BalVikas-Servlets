@@ -63,8 +63,9 @@
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
                         <a class="dropdown-item" href="profile.jsp">Profile</a>
-                        <a class="dropdown-item" href="editpwd.jsp">Edit Password</a>
 
+                        <a class="dropdown-item" href="editpwd.jsp">Edit Password</a>
+                        
                         <a class="dropdown-item" href="index.jsp">Log Out</a>
                       </div>
                     </li>   
